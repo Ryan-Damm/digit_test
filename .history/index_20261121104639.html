@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Neural Network Visualizer</title>
+</head>
+
+<body>
+	<h1>Digit Recognizer</h1>
+
+	<div class="container">
+		<div>
+			<h2>Draw a digit</h2>
+			<canvas id="drawingCanvas" width="280" height="280"></canvas>
+			<br>
+			<button id="clearButton">Clear</button>
+		</div>
+
+		<div>
+			<h2>Prediction</h2>
+			<div id="prediction">Draw something!</div>
+		</div>
+	</div>
+
+	<div>
+		<h2>Neural Network</h2>
+		<canvas id="networkCanvas" width="900" height="320"></canvas>
+	</div>
+
+	<div>
+		<h2>Predictions</h2>
+		<div id="probabilities"></div>
+	</div>
+
+	<script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
