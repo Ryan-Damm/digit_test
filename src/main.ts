@@ -164,8 +164,17 @@ function displayPredictions(output: number[][]) {
 let model: Model;
 
 async function loadModel() {
-    const response = await fetch("/models/model.json");
+    const response = await fetch(
+        `${import.meta.env.BASE_URL}models/model.json`
+    );
+
+    if (!response.ok) {
+        throw new Error(`Failed to load model: ${response.status}`);
+    }
+
     model = await response.json();
+
+    console.log("Model loaded!", model);
 }
 
 function predict() {
