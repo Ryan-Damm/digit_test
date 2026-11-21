@@ -1,0 +1,31 @@
+body {
+    background: #10121a;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 40px;
+}
+
+.container {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+canvas {
+    background: black;
+    border: 2px solid #555;
+    cursor: crosshair;
+    width: 280px;
+    height: 280px;
+    touch-action: none;
+}
+
+button {
+    margin-top: 12px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#prediction {
+    font-size: 24px;
+}
