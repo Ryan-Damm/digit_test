@@ -6,11 +6,6 @@ export interface Model {
     architecture: number[];
 }
 
-const initializeModel = async (file: string) => {
-    const response = await fetch(file);
-    return await response.json();
-}
-
 const softmax = (z: number[][]): number[][] => {
     if (z.length === 0) return [];
     const numCols = z[0].length;
