@@ -6,4 +6,4 @@
                 </div>
             </div>
             <span>${r.toFixed(1)}%</span>
-        `,t.appendChild(i)})}var m;async function h(){m=await(await fetch(`/models/model.json`)).json()}function g(){if(!m)return;let{cache:e,a:t}=i(d(),m);f(e),p(t)}
+        `,t.appendChild(i)})}var m;async function h(){let e=await fetch(`/digit_test/models/model.json`);if(!e.ok)throw Error(`Failed to load model: ${e.status}`);m=await e.json(),console.log(`Model loaded!`,m)}function g(){if(!m)return;let{cache:e,a:t}=i(d(),m);f(e),p(t)}
